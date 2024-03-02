@@ -49,17 +49,12 @@ print(result_Y)
 theta = [[0, 0, 0]]
 theta = torch.tensor(theta, dtype=torch.double)  # 转换列表为Tensor，类型为 double
 
-# -. 绘制 sigmoid 函数的曲线
-# TODO: here
-
 # 3. 根据 theta 绘制 J(theta) 的三维曲面，观察它的样子
 print(theta)
-
 
 print(theta @ result_X[0])
 
 # print(sigmoid(theta, result_X[1]))
-
 
 zero_tensor = torch.tensor([0], dtype=torch.double)
 print(sigmoid(zero_tensor))
