@@ -1,5 +1,11 @@
 import torch
 
+# 这是 J loss function 函数的定义
+# def cross_entr
+
+# pytorch 不需要我们自己定义 sigmoid，它本身有 sigmoid 函数方法
+# y = torch.sigmoid(x)
+
 # 1. 加载样本数据和标签数据 (要记得对 x 进行扩充 “1”)
 data_X_path = 'logistic_x.txt'  # X样本文件路径
 data_Y_path = 'logistic_y.txt'  # Y标签文件路径
@@ -40,9 +46,31 @@ print(result_X)
 print(result_Y)
 
 # 2. 初始化 theta = [0 0 0] 向量    (可以看到这是一个三维向量，这意味着我们可以绘图，观察曲线)
+theta = [[0, 0, 0]]
+theta = torch.tensor(theta, dtype=torch.double)  # 转换列表为Tensor，类型为 double
 
+# -. 绘制 sigmoid 函数的曲线
+# TODO: here
 
 # 3. 根据 theta 绘制 J(theta) 的三维曲面，观察它的样子
+print(theta)
+
+
+print(theta @ result_X[0])
+
+# print(sigmoid(theta, result_X[1]))
+
+
+zero_tensor = torch.tensor([0], dtype=torch.double)
+print(sigmoid(zero_tensor))
+
+
+
+
+
+
+
+
 
 
 
